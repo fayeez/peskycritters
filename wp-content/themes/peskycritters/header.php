@@ -5,8 +5,8 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage PeskyCritters
+ * @since Pesky Critters 1.0
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -37,13 +37,14 @@
 			<div class="col-xs-3 full-banner-size">
 				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory') ."/images/PeskyCrittersLogo.png"; ?>" />
 			</div><!-- header -->
-			<div class="col-xs-9 full-banner-size header-width bg-col3">
+			<div class="col-xs-9 full-banner-size header-width">
 				<div class="row" id="search">
 					Search
 				</div>
 				<div class="row">
 					<h2 class="col-xs-9" id="strapline">Responding, Protecting, Preventing</h2>
 				</div>
+				
 				<div class="row contact-banner-pos">
 					<div class="col-md-3">Rapid Response</div>
 					<div class="col-md-3">Tel No.</div>
@@ -60,6 +61,8 @@
 						</div>
 					</div>
 				</div>
+				
+				
 			</div><!-- header -->
 		</header>
 		<div class="row">
@@ -92,4 +95,4 @@
 			
 			
 		</div>
-		<div class="site-main">
+		<div class="site-ain">

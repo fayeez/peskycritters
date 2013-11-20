@@ -1,5 +1,4 @@
 @import url("bootstrap.min.css");
-@import url("mediqqueries.css");
 
 /*BACKGROUND COLOURS FOR LAYOUT*/
 .bg-col1 {
@@ -24,6 +23,11 @@
 }
 * {
     font-family: Arial;
+}
+/*Utility classes*/
+.col-centre {
+    float: none;
+    margin: 0 auto;
 }
 
 /*Media Queries*/
@@ -58,7 +62,6 @@
         font-size: 2.6em !important;
     }
 }
-
 
 /*Banner Style adjustments*/
 .full-banner-size {
@@ -125,4 +128,9 @@
 }
 .navbar-background {
     background-color: #d11212;
+}
+/*Footer style adjustments*/
+.footer {
+    background-color: #1F2854;
+    height: 225px;
 }
