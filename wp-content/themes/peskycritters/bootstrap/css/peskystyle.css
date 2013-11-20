@@ -1,0 +1,128 @@
+@import url("bootstrap.min.css");
+@import url("mediqqueries.css");
+
+/*BACKGROUND COLOURS FOR LAYOUT*/
+.bg-col1 {
+    background-color: red;
+    color: white;
+}
+.bg-col2 {
+    background-color: green;
+    color: white;
+}
+.bg-col3 {
+    background-color: blue;
+    color: white;
+}
+.bg-col4 {
+    background-color: purple;
+    color: white;
+}
+.bg-col5 {
+    background-color: black;
+    color: white;
+}
+* {
+    font-family: Arial;
+}
+
+/*Media Queries*/
+/*Addthe variables once less is functional..
+@screen-xs-min etc
+*/
+@media (min-width: 320px)
+{
+    .full-banner-size{height: 127px !important;}
+    #strapline {
+        font-size: 0.9em !important;
+        width: 100%;
+    }
+    #search {
+        display: none;
+    }
+}
+@media (min-width: 768px)
+{
+    .full-banner-size{height: 177px !important;}
+    #strapline {
+        font-size: 1.6em !important;
+    }
+    #search {
+        display: inline ;
+    }
+}
+@media (min-width: 922px)
+{
+    .full-banner-size{height: 277px !important;}
+    #strapline {
+        font-size: 2.6em !important;
+    }
+}
+
+
+/*Banner Style adjustments*/
+.full-banner-size {
+    height: 277px;
+}
+.contact-banner-pos {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.banner-pos {
+    position: absolute;
+    bottom:0;
+}
+.header-width {
+    min-width: 100px;
+}
+#strapline {
+    /*margin-top: 50px;*/
+    /*margin-bottom: 50px;*/
+}
+
+/*Logo Style adjustments*/
+.logo-pos {
+    position: absolute;
+    left: 0;
+    bottom:0;
+}
+.logo-width {
+    width:88%;
+}
+/*Navbar Style adjustments*/
+.navbar .nav,
+.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    *zoom:1; /* hasLayout ie7 trigger */
+    vertical-align: top;
+}
+.navbar-inner {
+    text-align:center;
+}
+.navbar {
+    /* get rid of border radius */
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+
+}
+/*Change navbar item colour*/
+.nav > li > a {
+    color: white;
+}
+/*Change navbar hover colour*/
+.nav > li > a:hover {
+    color: #1F2854;
+}
+.call-to-action {
+    color: #FFCD5F !important;
+}
+.nav > ul > li:last-child{
+    color: #ffcd5f !important;
+}
+.navbar-background {
+    background-color: #d11212;
+}

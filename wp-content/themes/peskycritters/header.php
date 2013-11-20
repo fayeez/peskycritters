@@ -21,31 +21,75 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title>Pesky Critters</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap/css/peskystyle.css"  type="text/css"/>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-	<div id="page" class="hfeed site">
-		<header id="masthead" class="site-header" role="banner">
-			<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-				<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</a>
-
-			<div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
-					<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
-					<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-					<?php get_search_form(); ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->
-		</header><!-- #masthead -->
-
-		<div id="main" class="site-main">
+<body>
+	<div class="container">
+		<header class="row">
+			<div class="col-xs-3 full-banner-size">
+				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory') ."/images/PeskyCrittersLogo.png"; ?>" />
+			</div><!-- header -->
+			<div class="col-xs-9 full-banner-size header-width bg-col3">
+				<div class="row" id="search">
+					Search
+				</div>
+				<div class="row">
+					<h2 class="col-xs-9" id="strapline">Responding, Protecting, Preventing</h2>
+				</div>
+				<div class="row contact-banner-pos">
+					<div class="col-md-3">Rapid Response</div>
+					<div class="col-md-3">Tel No.</div>
+					<div class="col-md-3">Email</div>
+					<div class="col-md-3">
+						<div class="col-xs-4">
+							Fb
+						</div>
+						<div class="col-xs-4">
+							Twitter
+						</div>
+						<div class="col-xs-4">
+							YT
+						</div>
+					</div>
+				</div>
+			</div><!-- header -->
+		</header>
+		<div class="row">
+			<nav class="navbar navbar-background">
+				<div class="navbar-inner">
+					<div class="container">
+						<?php
+							if(function_exists('wp_nav_menu')):
+								wp_nav_menu(
+								array(
+									
+									'menu' =>'Pesky Menu',
+									'container' =>'',
+									'depth' => 4,
+									'menu_class' => 'nav navbar-nav',
+									'menu_id' =>'menu' )
+									);
+							else:
+							?>
+									<ul id="menu">
+										<?php wp_list_pages('title_li=&depth=1'); ?>
+									</ul>
+								<?php
+								endif;
+						?>
+					</div>
+				</div>
+			</nav>
+			
+			
+			
+		</div>
+		<div class="site-main">

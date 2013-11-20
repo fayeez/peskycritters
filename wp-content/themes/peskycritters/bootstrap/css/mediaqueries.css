@@ -1,0 +1,12 @@
+/*Media Queries*/
+/*Addthe variables once less is functional..
+@screen-xs-min etc
+*/
+@media (min-width: 768px)
+{
+    .banner-size{height: 177px !important;}
+}
+@media (min-width: 922px)
+{
+    .banner-size{height: 277px !important;}
+}

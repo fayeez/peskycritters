@@ -22,5 +22,7 @@
 	</div><!-- #page -->
 
 	<?php wp_footer(); ?>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
