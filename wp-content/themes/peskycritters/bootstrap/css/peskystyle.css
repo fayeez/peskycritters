@@ -22,12 +22,18 @@
     color: white;
 }
 * {
-    font-family: Arial;
+    font-family: Avenir;
+}
+html {
+    min-width: 340px;
 }
 /*Utility classes*/
 .col-centre {
     float: none;
     margin: 0 auto;
+}
+.right {
+    float: right;
 }
 
 /*Media Queries*/
@@ -36,62 +42,148 @@
 */
 @media (min-width: 320px)
 {
-    .full-banner-size{height: 127px !important;}
+    /*.full-banner-size{height: 130px !important;}*/
     #strapline {
-        font-size: 0.9em !important;
+        font-size: 1em !important;
         width: 100%;
+        
+    }
+    .strapline-margin {
+        margin-top:0% !important;
+        margin-bottom:0% !important;
+    }
+    .rapid-response {
+        
     }
     #search {
-        display: none;
+        display: none !important;
+    }
+    .logo-width {
+        width: 30% !important;
+    }
+    .logo-pos {
+        position: inherit;
+        left: 33% !important;
+    }
+    .bg-logo-col {
+        background-color: #d11212 !important;
+    }
+    .contact {
+        font-size: 8pt !important;
+    }
+}
+@media (min-width: 460px)
+{
+    /*.full-banner-size{height: 167px !important;}*/
+    #strapline {
+        font-size: 1.3em !important;
+        display: inline !important;
+        
+    }
+    .rapid-response {
+        display: inline !important;
+    }
+    .full-banner-size {
+        float:none !important;
+        margin: 0 auto;
+    }
+    #search {
+        display: inline !important;
+    
+    }
+    .logo-width {
+        width: 30% !important;
+    }
+    .logo-pos {
+        position: inherit;
+        left: 33% !important;
+    }
+    .bg-logo-col {
+        background-color: #d11212 !important;
     }
 }
 @media (min-width: 768px)
 {
-    .full-banner-size{height: 177px !important;}
+    /*.full-banner-size{height: 187px !important;}*/
     #strapline {
-        font-size: 1.6em !important;
+        font-size: 1.5em !important;
+    }
+    .strapline-margin {
+        margin-top:8% !important;
+        margin-bottom:1% !important;
     }
     #search {
-        display: inline ;
+        display: inline !important;
     }
+    .logo-width {
+        width: 88% !important;
+    }
+    .logo-pos {
+        position: inherit;
+        left: -15px !important;
+    }
+    .bg-logo-col {
+        background-color: transparent !important;
+    }
+    
 }
 @media (min-width: 922px)
 {
-    .full-banner-size{height: 277px !important;}
+    .full-banner-size{height: 177px !important;}
     #strapline {
-        font-size: 2.6em !important;
+        font-size: 1.8em !important;
+    }
+    .strapline-margin {
+        margin-top:8% !important;
+        margin-bottom:3% !important;
+    }
+    .logo-width {
+        width: 88% !important;
+    }
+    .bg-logo-col {
+        background-color: transparent !important;
+    }
+    .contact {
+        font-size: 10pt !important;
     }
 }
-
+@media (min-width: 1200px)
+{
+    .strapline-margin {
+        margin-top:8% !important;
+        margin-bottom:6% !important;
+    }
+}
 /*Banner Style adjustments*/
 .full-banner-size {
-    height: 277px;
-}
-.contact-banner-pos {
+    height: inherit;
     position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
-.banner-pos {
-    position: absolute;
-    bottom:0;
+    bottom: 0;
 }
 .header-width {
-    min-width: 100px;
+    min-width: 120px;
 }
 #strapline {
-    /*margin-top: 50px;*/
-    /*margin-bottom: 50px;*/
+    font-family: Avenir;
+    color: #1F2854;
+}
+.rapid-response {
+    font-weight: 500;
+    
+}
+.contact {
+    min-width: 150px;
 }
 
 /*Logo Style adjustments*/
 .logo-pos {
-    position: absolute;
-    left: 0;
-    bottom:0;
+    position: inherit;
+    left: -15px;
 }
 .logo-width {
     width:88%;
+    min-width: 100px;
+    bottom: 0px;
 }
 /*Navbar Style adjustments*/
 .navbar .nav,
@@ -106,11 +198,13 @@
     text-align:center;
 }
 .navbar {
-    /* get rid of border radius */
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    border-radius: 0 !important;
-
+    /* Let's soften the corner's of the navbar slightly */
+    -webkit-border-radius: 1px !important;
+    -moz-border-radius: 1px !important;
+    border-radius: 1px !important;
+}
+.contact-pos {
+    px;
 }
 /*Change navbar item colour*/
 .nav > li > a {
@@ -128,6 +222,19 @@
 }
 .navbar-background {
     background-color: #d11212;
+}
+/*Search style adjustments*/
+.search-query {
+    height: 30px;
+}
+.search-bar .btn-primary {
+    /* Let's soften the corner's of the search button slightly */
+    -webkit-border-radius: 1px !important;
+    -moz-border-radius: 1px !important;
+    border-radius: 1px !important;
+    background-color: #1F2854;
+    height: 28px;
+    border: none;
 }
 /*Footer style adjustments*/
 .footer {

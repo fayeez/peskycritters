@@ -34,36 +34,33 @@
 <body>
 	<div class="container">
 		<header class="row">
-			<div class="col-xs-3 full-banner-size">
+			<div class="col-sm-3 bg-log-col">
 				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory') ."/images/PeskyCrittersLogo.png"; ?>" />
-			</div><!-- header -->
-			<div class="col-xs-9 full-banner-size header-width">
-				<div class="row" id="search">
-					Search
-				</div>
-				<div class="row">
-					<h2 class="col-xs-9" id="strapline">Responding, Protecting, Preventing</h2>
-				</div>
+			</div>
+			<div class="col-xs-11 col-sm-9 col-centre" id="search">
+				<form class="search-bar right">
+					<input type="text" class="search-query" placeholder="Search">
+					<button type="submit" class="btn btn-primary">
+						Go
+					</button>
+				</form>
 				
-				<div class="row contact-banner-pos">
-					<div class="col-md-3">Rapid Response</div>
-					<div class="col-md-3">Tel No.</div>
-					<div class="col-md-3">Email</div>
-					<div class="col-md-3">
-						<div class="col-xs-4">
-							Fb
-						</div>
-						<div class="col-xs-4">
-							Twitter
-						</div>
-						<div class="col-xs-4">
-							YT
-						</div>
-					</div>
+			</div>
+			<div class="col-xs-10 col-md-12 strapline-margin col-centre">
+				<h2 id="strapline">Responding, Protecting, Preventing</h2>
+				<p><b>Rapid Response</b></p>
+			</div>
+			<div class="contact-pos">
+				<div class="col-xs-2 col-sm-2 contact">LOGO 07000000000</div>
+				<div class="col-xs-2 col-sm-4 contact">LOGO info@pesky-critters.co.uk</div>
+				<div class="col-xs-4 col-sm-2">
+					<div class="col-xs-1 col-md-3 right"><img width="30px" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></div>
+					<div class="col-xs-1 col-md-3 right"><img width="30px" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></div>
+					<div class="col-xs-1 col-md-3 right"><img width="30px" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></div>
 				</div>
-				
-				
-			</div><!-- header -->
+			</div>
+	
+			
 		</header>
 		<div class="row">
 			<nav class="navbar navbar-background">
