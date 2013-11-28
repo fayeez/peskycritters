@@ -41,26 +41,31 @@
 				<form class="search-bar right">
 					<input type="text" class="search-query" placeholder="Search">
 					<button type="submit" class="btn btn-primary">
-						Go
+						<i class="icon_search"></i>Go
 					</button>
 				</form>
 				
 			</div>
 			<div class="col-xs-10 col-md-12 strapline-margin col-centre">
 				<h2 id="strapline">Responding, Protecting, Preventing</h2>
-				<p><b>Rapid Response</b></p>
+				<p class="rapid-response"><b>Rapid Response</b></p>
 			</div>
-			<div class="contact-pos">
-				<div class="col-xs-2 col-sm-2 contact">LOGO 07000000000</div>
-				<div class="col-xs-2 col-sm-4 contact">LOGO info@pesky-critters.co.uk</div>
-				<div class="col-xs-4 col-sm-2">
-					<div class="col-xs-1 col-md-3 right"><img width="30px" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></div>
-					<div class="col-xs-1 col-md-3 right"><img width="30px" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></div>
-					<div class="col-xs-1 col-md-3 right"><img width="30px" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></div>
+		
+			<div class="col-xs-8 col-sm-6 contact">
+				<div class="left header-icon-margins">
+					<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/phone-icon-col.png"; ?>" /> 07000000000
+				</div>
+			
+				<div class="left">
+					<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> info@pesky-critters.co.uk</div>
+			</div>
+			<div class="col-sm-3 col-md-2">
+				<div class="right">
+					<a href="#"><img class="header-icon-size left" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></a>
+					<a href="#"><img class="header-icon-size left" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></a>
+					<a href="#"><img class="header-icon-size left" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></a>
 				</div>
 			</div>
-	
-			
 		</header>
 		<div class="row">
 			<nav class="navbar navbar-background">
@@ -68,15 +73,19 @@
 					<div class="container">
 						<?php
 							if(function_exists('wp_nav_menu')):
+
 								wp_nav_menu(
-								array(
-									
-									'menu' =>'Pesky Menu',
-									'container' =>'',
-									'depth' => 4,
-									'menu_class' => 'nav navbar-nav',
-									'menu_id' =>'menu' )
-									);
+									array(	
+										'menu' => 'PeskyMenu',
+										'theme_location' => 'primary',
+										'container' =>'',
+										'depth' => 2,
+										'menu_class' => 'nav navbar-nav',
+										'menu_id' =>'menu',
+										'walker' => new wp_bootstrap_navwalker())
+										);
+
+
 							else:
 							?>
 									<ul id="menu">

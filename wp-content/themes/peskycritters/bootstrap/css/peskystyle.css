@@ -1,3 +1,11 @@
+/*
+Pesky Critters Colour scheme:
+Red = #aa0e0e
+Blue = #1F2854
+Call2Action = #FFCD5F
+White = #d4d4d4
+*/
+
 @import url("bootstrap.min.css");
 
 /*BACKGROUND COLOURS FOR LAYOUT*/
@@ -31,11 +39,50 @@ html {
 .col-centre {
     float: none;
     margin: 0 auto;
+    text-align: center;
 }
 .right {
     float: right;
 }
-
+.left {
+    float: left;
+}
+.bottom {
+    bottom: 0;
+}
+.text-center {
+    text-align: center;
+}
+.xs-margin-top {
+    margin-top: 2%;
+}
+.sm-margin-top {
+    margin-top: 4%;
+}
+.md-margin-top {
+    margin-top: 6%;
+}
+.lg-margin-top {
+    margin-top: 8%;
+}
+.xl-margin-top {
+    margin-top: 10%;
+}
+.xs-margin-bottom {
+    margin-bottom: 2%;
+}
+.sm-margin-bottom {
+    margin-bottom: 4%;
+}
+.md-margin-bottom {
+    margin-bottom: 6%;
+}
+.lg-margin-bottom {
+    margin-bottom: 8%;
+}
+.xl-margin-bottom {
+    margin-bottom: 10%;
+}
 /*Media Queries*/
 /*Addthe variables once less is functional..
 @screen-xs-min etc
@@ -49,11 +96,10 @@ html {
         
     }
     .strapline-margin {
-        margin-top:0% !important;
-        margin-bottom:0% !important;
+        margin:0% !important;
     }
     .rapid-response {
-        
+        display: none !important;
     }
     #search {
         display: none !important;
@@ -72,7 +118,7 @@ html {
         font-size: 8pt !important;
     }
 }
-@media (min-width: 460px)
+@media (min-width: 480px)
 {
     /*.full-banner-size{height: 167px !important;}*/
     #strapline {
@@ -81,7 +127,7 @@ html {
         
     }
     .rapid-response {
-        display: inline !important;
+        display: block !important;
     }
     .full-banner-size {
         float:none !important;
@@ -109,7 +155,7 @@ html {
         font-size: 1.5em !important;
     }
     .strapline-margin {
-        margin-top:8% !important;
+        margin-top:5% !important;
         margin-bottom:1% !important;
     }
     #search {
@@ -134,7 +180,7 @@ html {
         font-size: 1.8em !important;
     }
     .strapline-margin {
-        margin-top:8% !important;
+        margin-top:6% !important;
         margin-bottom:3% !important;
     }
     .logo-width {
@@ -151,7 +197,7 @@ html {
 {
     .strapline-margin {
         margin-top:8% !important;
-        margin-bottom:6% !important;
+        margin-bottom:3% !important;
     }
 }
 /*Banner Style adjustments*/
@@ -173,8 +219,15 @@ html {
 }
 .contact {
     min-width: 150px;
+    text-align: center;
 }
-
+.header-icon-margins {
+    margin-right: 2%;
+}
+.header-icon-size {
+    width: 50%;
+    max-width: 30px;
+}
 /*Logo Style adjustments*/
 .logo-pos {
     position: inherit;
@@ -203,25 +256,57 @@ html {
     -moz-border-radius: 1px !important;
     border-radius: 1px !important;
 }
-.contact-pos {
-    px;
-}
 /*Change navbar item colour*/
 .nav > li > a {
-    color: white;
+    color: #d4d4d4;
+}
+/*For drop down for one level*/
+.nav ul > li > a {
+    color: #d4d4d4;
 }
 /*Change navbar hover colour*/
 .nav > li > a:hover {
     color: #1F2854;
 }
-.call-to-action {
-    color: #FFCD5F !important;
-}
-.nav > ul > li:last-child{
-    color: #ffcd5f !important;
+/*For drop down for one level*/
+.nav ul > li > a:hover {
+    color: #1F2854;
 }
 .navbar-background {
     background-color: #d11212;
+}
+.navbar-background .dropdown-menu {
+    background-color: #d11212;
+}
+/*Call to Action for the navbar*/
+.navbar-inner > .container > ul > li:last-child > a {
+    color: #FFCD5F !important;
+}
+/*Call to Action for the navbar - hover*/
+.navbar-inner > .container > ul > li:last-child > a:hover {
+    color: #1F2854 !important;
+}
+
+/*For the highlight on the navbar menu item which has the drop down on.
+It is to add the highlight when once you click the drop down, since the
+background and color of text are very similar*/
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #aa0e0e;
+}
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle:hover{
+    color: #d4d4d4;
+}
+/*The icon for the collapse button, to expand the navigation*/
+.collapse-icon-bar{
+    
+}
+/*Navbar drop down style adjustments*/
+.dropdown-header {
+    display: none;
+}
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-bottom-color: #1F2854;
+    border-top-color: #1F2854;
 }
 /*Search style adjustments*/
 .search-query {
@@ -238,6 +323,23 @@ html {
 }
 /*Footer style adjustments*/
 .footer {
+    color: #d4d4d4 !important;
     background-color: #1F2854;
     height: 225px;
+    height: auto;
+}
+.footer-logo-size {
+    width: 49%;
+}
+.footer #pesky-critters-footer {
+    font-size: 0.9em;
+    color: #d4d4d4;
+}
+.footer #designed-by a {
+    font-size: 0.7em;
+    color: #d4d4d4;
+}
+.footer-icon-size {
+    width: 25%;
+    max-width: 80px;
 }
