@@ -167,7 +167,6 @@ html {
     .bg-logo-col {
         background-color: transparent !important;
     }
-    
 }
 @media (min-width: 922px)
 {
@@ -321,15 +320,15 @@ background and color of text are very similar*/
 /*Slider style adjustments*/
 .slider {
     position: relative;
-    height:350px;
+    height:400px;
     overflow: hidden;
     margin-bottom: 2%;
 }
 .slider .slider-img {
-    width: 100%;
-    height: inherit;
+    /*height: 450px;*/
     position: absolute;
-    top:0;
+    top: -50px;
+    left: -30px;
     opacity:0;
     z-index: 0;
 }
@@ -338,8 +337,10 @@ background and color of text are very similar*/
     background-color:#aa0e0e;
     color:#ffffff;
     position: inherit;    
-    bottom: -230px;
+    bottom: -250px;
+    left: -30px;
     height: 80px;
+    width: 125%;
 }
 .slider .caption .content {
     margin:5px
@@ -351,6 +352,7 @@ background and color of text are very similar*/
     color:#1DCCEF;
 }
 .slider_nav {
+    top: 70px;
     width: 10px;
     height: 20px;
 }

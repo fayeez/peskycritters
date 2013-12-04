@@ -15,9 +15,47 @@ get_header(); ?>
 			<div class="col-md-12 col-centre">
 				<div class="col-md-12">
 					<div class="col-md-8 slider">
-						<img class="slider-img" id="1" src="http://www.gifmix.net/smileys/sports-smilies/5.gif" alt="<h2>My Header</h2>Some text!"/>
-						<img class="slider-img" id="2" src="http://www.gifmix.net/smileys/sports-smilies/6.gif" alt="<h2>My Second Header</h2>Second some text!"/>
-						<div class="caption"><div class="content"></div></div>
+						<?php
+						
+						
+						$images = array();
+						$image_text = array();
+						$slider_img_dir = dirname(__FILE__) . '/images/slider-images/';
+						
+						if ($handle = opendir($slider_img_dir)){
+							while (false !== $entry = readdir($handle)){
+								if ($entry != "." && $entry != ".." && $entry != ".DS_Store") {
+									if (strpos($entry, 'jpg')){
+										$images[] = $entry;
+									}
+									elseif (strpos($entry, 'txt')){
+										$image_text[] = $entry;
+									}
+								}
+							}
+							//Numerically sort the lists
+							sort($images);
+							sort($image_text);
+							
+							//Limit number of images the header is allowed
+							$images = array_slice($images, 0, 5);
+							
+							for($i = 0; $i < sizeof($images); $i++){
+								//Parse the text file to read in the data to display
+								$file = file($slider_img_dir.$image_text[$i]);
+								
+								
+								$contents = explode(":", $file[0]);
+								$header = $contents[0];
+								$description = $contents[1];
+								//echo $header . " " .  $description . "<br/>";
+								?>
+								<img class="slider-img" id="<?php echo $i +1 ?>" src="<?php echo bloginfo('template_directory').'/images/slider-images/'.$images[$i]; ?>" alt="<h2><?php echo $header ?></h2><p><?php echo $description ?></p>"/>
+								<?php
+							}
+						}
+						?>
+						<div class="caption col-md-12"><div class="content"></div></div>
 						<div class="col-xs-12">
 							<div class="slider_nav previous col-xs-1">
 								<img name="prev" src="<?php bloginfo('template_directory'); ?>/images/previous.png"/>

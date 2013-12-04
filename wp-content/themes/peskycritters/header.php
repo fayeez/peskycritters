@@ -46,7 +46,7 @@
 				</form>
 			</div>
 			<div class="col-xs-10 col-md-12 strapline-margin col-centre">
-				<h2 id="strapline">Responding, Protecting, Preventing</h2>
+				<h2 class="site-description" id="strapline"><?php bloginfo( 'description' ); ?></h2>
 				<p class="rapid-response"><b>Rapid Response</b></p>
 			</div>
 		
