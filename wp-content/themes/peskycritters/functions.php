@@ -19,8 +19,8 @@
  * For more information on hooks, actions, and filters, @link http://codex.wordpress.org/Plugin_API
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage PeskyCritters
+ * @since PeskyCritters 1.0
  */
 
 /*

@@ -28,23 +28,22 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
-	<?php wp_head(); ?>
+	<?php
+	include("jquery.php");
+	wp_head();
+	?>
 </head>
-
 <body>
 	<div class="container">
 		<header class="row">
 			<div class="col-sm-3 bg-log-col">
-				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory') ."/images/PeskyCrittersLogo.png"; ?>" />
+				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory'); ?>/images/PeskyCrittersLogo.jpg" />
 			</div>
 			<div class="col-xs-11 col-sm-9 col-centre" id="search">
-				<form class="search-bar right">
-					<input type="text" class="search-query" placeholder="Search">
-					<button type="submit" class="btn btn-primary">
-						<i class="icon_search"></i>Go
-					</button>
+				<form method="get" class="search-bar right" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+					<input type="text" class="search-query" name="s" placeholder="<?php esc_attr_e( 'Search', 'peskycritters' ); ?>">
+					<button type="submit" class="btn btn-primary"><i class="icon_search"></i>Go</button>
 				</form>
-				
 			</div>
 			<div class="col-xs-10 col-md-12 strapline-margin col-centre">
 				<h2 id="strapline">Responding, Protecting, Preventing</h2>

@@ -39,7 +39,6 @@ html {
 .col-centre {
     float: none;
     margin: 0 auto;
-    text-align: center;
 }
 .right {
     float: right;
@@ -87,13 +86,15 @@ html {
 /*Addthe variables once less is functional..
 @screen-xs-min etc
 */
-@media (min-width: 320px)
+@media (min-width: 170px)
 {
     /*.full-banner-size{height: 130px !important;}*/
     #strapline {
         font-size: 1em !important;
         width: 100%;
-        
+    }
+    .slider_nav {
+        display: none !important;
     }
     .strapline-margin {
         margin:0% !important;
@@ -111,15 +112,12 @@ html {
         position: inherit;
         left: 33% !important;
     }
-    .bg-logo-col {
-        background-color: #d11212 !important;
-    }
-    .contact {
-        font-size: 8pt !important;
-    }
 }
 @media (min-width: 480px)
 {
+    .slider_nav {
+        display: inline !important;
+    }
     /*.full-banner-size{height: 167px !important;}*/
     #strapline {
         font-size: 1.3em !important;
@@ -144,9 +142,7 @@ html {
         position: inherit;
         left: 33% !important;
     }
-    .bg-logo-col {
-        background-color: #d11212 !important;
-    }
+
 }
 @media (min-width: 768px)
 {
@@ -236,7 +232,7 @@ html {
 .logo-width {
     width:88%;
     min-width: 100px;
-    bottom: 0px;
+    bottom: -1px;
 }
 /*Navbar Style adjustments*/
 .navbar .nav,
@@ -320,7 +316,48 @@ background and color of text are very similar*/
     background-color: #1F2854;
     height: 28px;
     border: none;
+    margin-top: -1px;
 }
+/*Slider style adjustments*/
+.slider {
+    position: relative;
+    height:350px;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+.slider .slider-img {
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    top:0;
+    opacity:0;
+    z-index: 0;
+}
+.slider .caption {
+    z-index:600;
+    background-color:#aa0e0e;
+    color:#ffffff;
+    position: inherit;    
+    bottom: -230px;
+    height: 80px;
+}
+.slider .caption .content {
+    margin:5px
+}
+
+.slider .caption .content h3 {
+    margin: 0;
+    padding:0;
+    color:#1DCCEF;
+}
+.slider_nav {
+    width: 10px;
+    height: 20px;
+}
+.previous{
+    left: 15px;
+}
+
 /*Footer style adjustments*/
 .footer {
     color: #d4d4d4 !important;
@@ -340,6 +377,9 @@ background and color of text are very similar*/
     color: #d4d4d4;
 }
 .footer-icon-size {
-    width: 25%;
+    width: 20%;
     max-width: 80px;
+}
+.footer-sitemap li{
+    list-style: none;
 }

@@ -3,8 +3,8 @@
  * The template for displaying Search Results pages
  *
  * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
+ * @subpackage PeskyCritters
+ * @since Pesky Critters 1.0
  */
 
 get_header(); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
 
-			<?php twentythirteen_paging_nav(); ?>
+			<?php peskycritters_paging_nav(); ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
