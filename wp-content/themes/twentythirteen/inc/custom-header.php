@@ -206,6 +206,7 @@ function twentythirteen_admin_header_style() {
 <?php
 }
 
+
 /**
  * Output markup to be displayed on the Appearance > Header admin panel.
  *

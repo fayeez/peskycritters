@@ -529,8 +529,55 @@ function twentythirteen_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'twentythirteen_theme_options[custom_text]' )->transport = 'postMessage';
+    
+    $wp_customize->add_section('layout_section', array(
+            'title' => __('Layout', 'twentythirteen'),
+            'capability' => 'edit_theme_options',
+        )
+    );
+    
+    $wp_customize->add_setting('twentythirteen_theme_options[test_setting]', array(
+            'default' => '1',
+            'type' => 'option',
+            'capability' => 'edit_theme_options',
+        )
+    );
+    
+    $wp_customize->add_control('twentythirteen_theme_options[test_setting]', array(
+            'label' => __('Test Setting', 'twentythirteen'),
+            'section' => 'layout_section',
+            'settings' => 'twentythirteen_theme_options[test_setting]',
+            'type' => 'checkbox',
+        )
+    
+    );
+    
+    # Add text input form to change custom text
+    $wp_customize->add_setting('twentythirteen_theme_options[custom_text]', array(
+        'capability' => 'edit_theme_options',
+        'type'       => 'option',
+        'default'       => 'Custom text', # Default custom text
+    ));
+     
+    $wp_customize->add_control('twentythirteen_theme_options[custom_text]', array(
+            'label' => 'Custom text', # Label of text form
+            'section' => 'layout_section', # Layout Section
+            'type' => 'text', # Type of control: text input
+    ));  
+    
 }
 add_action( 'customize_register', 'twentythirteen_customize_register' );
+
+function twentythirteen_theme_options($name, $default=false) {
+    $options = ( get_option( 'twentythirteen_theme_options' ) ) ? get_option( 'twentythirteen_theme_options' ) : null;
+    // return the option if it exists
+    if ( isset( $options[ $name ] ) ) {
+        return apply_filters( 'twentythirteen_theme_options_$name', $options[ $name ] );
+    }
+    // return default if nothing else
+    return apply_filters( 'twentythirteen_theme_options_$name', $default );
+}
 
 /**
  * Enqueue Javascript postMessage handlers for the Customizer.

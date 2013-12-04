@@ -12,7 +12,7 @@
 			$( '.site-title' ).text( to );
 		} );
 	} );
-	wp.customize( 'blogdescription', function( value ) {
+	wp.customize( 'twentythirteen_theme_options[custom_text]', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-description' ).text( to );
 		} );
