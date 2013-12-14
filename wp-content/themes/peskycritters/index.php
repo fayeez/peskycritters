@@ -70,7 +70,7 @@ get_header(); ?>
 						<div class="col-md-12 col-md-offset-1 col-sm-6 col-xs-">
 							!VIDEO!
 						</div>
-						<div class="col-md-12 col-md-offset-1 col-sm-6 col-xs- news-announcement">
+						<div class="col-md-12 col-md-offset-1 col-sm-6 col-xs-6 news-announcement">
 							<h4>News</h4>
 							<hr/>
 							<div class="news-announcement-text">
@@ -99,7 +99,7 @@ get_header(); ?>
 								if ($infobox !== "")
 								{
 							?>	
-									<div class="col-md-4 col-sm-4 col-xs-7 parentbox">
+									<div class="col-md-4 col-sm-4 col-xs-6 col-xs-offset-1 col-sm-offset-0">
 										<div class="col-md12 infobox">
 											<?php echo $infobox; ?>
 										</div>
@@ -116,7 +116,7 @@ get_header(); ?>
 				<?php endif; ?>
 				</div>
 				<div class="call-to-action-btn">
-					Get a Quote!
+					<a href="#" ><h3>Get a Quote!</h3></a>
 				</div>
 				
 				

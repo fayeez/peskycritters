@@ -39,31 +39,32 @@
 			<div class="col-sm-3 bg-log-col">
 				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory'); ?>/images/PeskyCrittersLogo.jpg" />
 			</div>
-			<div class="col-xs-11 col-sm-9 col-centre" id="search">
-				<form method="get" class="search-bar right" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+			<div class="col-xs-11 col-sm-9 pull-right" id="search">
+				<form method="get" class="search-bar pull-right" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<input type="text" class="search-query" name="s" placeholder="<?php esc_attr_e( 'Search', 'peskycritters' ); ?>">
 					<button type="submit" class="btn btn-primary"><i class="icon_search"></i>Go</button>
 				</form>
 			</div>
 			<div class="col-xs-10 col-md-12 strapline-margin col-centre">
 				<h2 class="site-description" id="strapline"><?php bloginfo( 'description' ); ?></h2>
-				<p class="rapid-response"><b>Rapid Response</b></p>
 			</div>
-		
-			<div class="col-xs-8 col-sm-6 contact">
-				<div class="left header-icon-margins">
-					<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/phone-icon-col.png"; ?>" /> 07000000000
+			<div class="col-xs-12 col-sm-12 contact">
+				<div class="col-xs-12 col-sm-2 text-left">
+					<div id="contact-phone"><img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> 01753 123456</div>
 				</div>
-			
-				<div class="left">
-					<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> info@pesky-critters.co.uk</div>
+				<div class="col-xs-12 col-sm-3 heder-icon-margins text-left">
+					<div id="contact-mobile-number"><img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/phone-icon-col.png"; ?>" /> <strong>Rapid Response</strong> 07000000000</div>
+				</div>
+				<div class="col-xs-12 col-sm-2 col-md-3 text-left contact-pos">
+					<div id="contact-email"><img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> info@pesky-critters.co.uk</div>
+				</div>
+				<div class="col-sm-3 col-md-2 social-contact-pos pull-right">
+				<div class="pull-right">
+					<a href="#"><img class="header-social-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></a>
+					<a href="#"><img class="header-social-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></a>
+					<a href="#"><img class="header-social-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></a>
+				</div>
 			</div>
-			<div class="col-sm-3 col-md-2">
-				<div class="right">
-					<a href="#"><img class="header-icon-size left" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></a>
-					<a href="#"><img class="header-icon-size left" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></a>
-					<a href="#"><img class="header-icon-size left" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></a>
-				</div>
 			</div>
 		</header>
 		<div class="row">

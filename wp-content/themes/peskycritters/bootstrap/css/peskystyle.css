@@ -1,6 +1,6 @@
 /*
 Pesky Critters Colour scheme:
-Red = #aa0e0e
+Red = #d11212
 Blue = #1F2854
 Call2Action = #FFCD5F
 White = #d4d4d4
@@ -38,7 +38,7 @@ html {
 /*Page line style adjustment*/
 hr {
 	border: none;
-	background-color: #aa0e0e;
+	background-color: #d11212;
 	height: 2px;
 	margin-top: 1%;
 	margin-bottom: 1%;
@@ -98,6 +98,8 @@ hr {
 {
     /*.full-banner-size{height: 130px !important;}*/
     #strapline {
+        font-style: italic;
+        font-weight: 900;
         font-size: 1em !important;
         width: 100%;
     }
@@ -106,9 +108,6 @@ hr {
     }
     .strapline-margin {
         margin:0% !important;
-    }
-    .rapid-response {
-        display: none !important;
     }
     #search {
         display: none !important;
@@ -130,7 +129,24 @@ hr {
         float: none !important;
         margin: 0 auto !important;
     }
-
+    .contact {
+        font-size: 0.6em !important;
+    }
+    .header-icon-size{
+        width: 20px !important; 
+    }
+    .header-social-icon-size {
+        width: 20px !important;
+    }
+    #contact-phone {
+        left: -65px;
+    }
+    #contact-mobile-number {
+        left: -33px;
+    }
+    #contact-email {
+        left: -45px;
+    }
 }
 @media (min-width: 480px)
 {
@@ -161,13 +177,24 @@ hr {
         position: inherit;
         left: 33% !important;
     }
-    
+    .contact {
+        font-size: 0.8em !important;
+    }
+    #contact-phone {
+        font-size: 0.95em;
+    }
+    #contact-mobile-number {
+        font-size: 0.95em;
+    }
+    #contact-email {
+        font-size: 0.95em;
+    }        
 }
 @media (min-width: 768px)
 {
     /*.full-banner-size{height: 187px !important;}*/
     #strapline {
-        font-size: 1.5em !important;
+        font-size: 1.75em !important;
     }
     .strapline-margin {
         margin-top:5% !important;
@@ -190,12 +217,40 @@ hr {
         float: left !important;
         margin: 0 auto !important;
     }
+    .header-icon-size{
+        width: 15px !important; 
+    }
+    .header-social-icon-size{
+        width: 20px !important;
+    }
+    .social-contact-pos {
+        position: absolute;
+        bottom: -60px;
+        right: 0;
+    }
+    #contact-phone {
+        position: absolute;
+        bottom: -60px;
+        left: 0px;
+    }
+    #contact-mobile-number {
+        position: absolute;
+        width: 250px;
+        bottom: -60px;
+        left: 0px;
+    }
+    #contact-email {
+        position: absolute;
+        width: 250px;
+        bottom: -56px;
+        left: 0px;
+    }
 }
 @media (min-width: 922px)
 {
     .full-banner-size{height: 177px !important;}
     #strapline {
-        font-size: 1.8em !important;
+        font-size: 2.5em !important;
     }
     .strapline-margin {
         margin-top:6% !important;
@@ -207,8 +262,20 @@ hr {
     .bg-logo-col {
         background-color: transparent !important;
     }
-    .contact {
-        font-size: 10pt !important;
+    .header-icon-size{
+        width: 26px !important; 
+    }
+    .header-social-icon-size{
+        width: 30px !important;
+    }
+    #contact-phone {
+        font-size: 1.2em;
+    }
+    #contact-mobile-number  {
+        font-size: 1.1em;
+    }
+    #contact-email {
+        font-size: 1.2em;
     }
 }
 @media (min-width: 1200px)
@@ -216,6 +283,15 @@ hr {
     .strapline-margin {
         margin-top:8% !important;
         margin-bottom:3% !important;
+    }
+    #contact-phone {
+        font-size: 1.5em;
+    }
+    #contact-mobile-number  {
+        font-size: 1.4em;
+    }
+    #contact-email {
+        font-size: 1.5em;
     }
 }
 /*Banner Style adjustments*/
@@ -238,6 +314,7 @@ hr {
 .contact {
     min-width: 150px;
     text-align: center;
+    position: relative;
 }
 .header-icon-margins {
     margin-right: 2%;
@@ -273,6 +350,7 @@ hr {
     -webkit-border-radius: 1px !important;
     -moz-border-radius: 1px !important;
     border-radius: 1px !important;
+    font-size: 1.05em;
 }
 /*Change navbar item colour*/
 .nav > li > a {
@@ -299,17 +377,19 @@ hr {
 /*Call to Action for the navbar*/
 .navbar-inner > .container > ul > li:last-child > a {
     color: #FFCD5F !important;
+    font-weight: 900;
 }
 /*Call to Action for the navbar - hover*/
 .navbar-inner > .container > ul > li:last-child > a:hover {
     color: #1F2854 !important;
+    
 }
 
 /*For the highlight on the navbar menu item which has the drop down on.
 It is to add the highlight when once you click the drop down, since the
 background and color of text are very similar*/
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-    background-color: #aa0e0e;
+    background-color: #d11212;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle:hover{
     color: #d4d4d4;
@@ -325,12 +405,6 @@ background and color of text are very similar*/
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
     border-bottom-color: #1F2854;
     border-top-color: #1F2854;
-}
-
-/*Call to action box*/
-.call-to-action {
-    background: red !important;
-    
 }
 
 /*Search style adjustments*/
@@ -364,7 +438,7 @@ background and color of text are very similar*/
 }
 .slider .caption {
     z-index:600;
-    background-color:#aa0e0e;
+    background-color:#d11212;
     color:#ffffff;
     position: inherit;    
     bottom: -250px;
@@ -398,6 +472,7 @@ background and color of text are very similar*/
     border-radius: 5px !important;
     margin-bottom: 5%;
     height: 180px;
+    min-width: 200px;
 }
 .news-announcement div {
     width: 100% !important;
@@ -412,19 +487,40 @@ background and color of text are very similar*/
 
 /*Info box style adjustments*/
 .infobox{
-    -webkit-border-radius: 5px !important;
-    -moz-border-radius: 5px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
     border-radius: 20px !important;
     background-color: #EAEAEA;
-    
     margin-bottom: 15%;
     padding: 20%;
     text-align: center;
     height: 200px;
     overflow: hidden;
 }
-.infobox .call-to-action {
-    background: red !important;
+
+/*Call to action button*/
+.call-to-action-btn {
+    width: 120px;
+    height: 100px;
+    background: #f59029;
+    position: fixed;
+    bottom: -20px;
+    right: 0;
+    z-index:601;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 20px !important;
+}
+.call-to-action-btn:hover {
+    background: #d11212;
+}
+.call-to-action-btn a {
+    color: white;
+    text-align: center;
+}
+.call-to-action-btn a:hover {
+    color: #FFCD5F;
+    text-decoration: none;
 }
 
 /*Footer style adjustments*/
