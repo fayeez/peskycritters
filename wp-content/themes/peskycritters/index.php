@@ -66,34 +66,57 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>	
-					<div class="col-md-4 bg-col3">
-						<div class="col-md-12 bg-col2">
-							video
+					<div class="col-md-4 col-xs-offset-1 col-sm-offset-0">
+						<div class="col-md-12 col-md-offset-1 col-sm-6 col-xs-">
+							!VIDEO!
 						</div>
-						<div class="col-md-12 bg-col2">
-							Newsfeed
+						<div class="col-md-12 col-md-offset-1 col-sm-6 col-xs- news-announcement">
+							<h4>News</h4>
+							<hr/>
+							<div class="news-announcement-text">
+								<?php
+								if (function_exists ("news_announcement")){
+									news_announcement();
+								}	
+								?>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-12">
-					<div class="col-md-4 bg-col5">
-						Text/Info Box
-					</div>
-					<div class="col-md-4 bg-col4">
-						Text/Info Box
-					</div>
-					<div class="col-md-4 bg-col5">
-						Text/Info Box
-					</div>
-					<div class="col-md-4 bg-col4">
-						Text/Info Box
-					</div>
-					<div class="col-md-4 bg-col5">
-						Text/Info Box
-					</div>
-					<div class="col-md-4 bg-col4">
-						Text/Info Box
-					</div>
+				<div class="col-md-12 col-sm-12 col-xs-11">
+				<?php
+				query_posts('p=1');
+				if ( have_posts() ) :
+					 /* The loop */
+					while ( have_posts() ) :
+						the_post();
+						if ( strstr(get_the_title(), "Front Page Info Boxes" ) !== false )
+						{
+							
+							$infoboxes = explode('/end/', get_the_excerpt());
+							foreach ($infoboxes as $infobox)
+							{
+								if ($infobox !== "")
+								{
+							?>	
+									<div class="col-md-4 col-sm-4 col-xs-7 parentbox">
+										<div class="col-md12 infobox">
+											<?php echo $infobox; ?>
+										</div>
+									</div>
+							<?php
+								}
+							}
+						}
+					endwhile;
+					?>
+		
+				<?php else : ?>
+					<?php get_template_part( 'content', 'none' ); ?>
+				<?php endif; ?>
+				</div>
+				<div class="call-to-action-btn">
+					Get a Quote!
 				</div>
 				
 				

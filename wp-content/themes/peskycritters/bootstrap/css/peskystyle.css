@@ -30,10 +30,18 @@ White = #d4d4d4
     color: white;
 }
 * {
-    font-family: Avenir;
+    font-family: Avenir !important;
 }
 html {
     min-width: 340px;
+}
+/*Page line style adjustment*/
+hr {
+	border: none;
+	background-color: #aa0e0e;
+	height: 2px;
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
 /*Utility classes*/
 .col-centre {
@@ -112,6 +120,17 @@ html {
         position: inherit;
         left: 33% !important;
     }
+    .infobox{
+        
+        height: 200px;
+        overflow: hidden;
+        min-width: 200px;
+    }
+    .parentbox {
+        float: none !important;
+        margin: 0 auto !important;
+    }
+
 }
 @media (min-width: 480px)
 {
@@ -142,7 +161,7 @@ html {
         position: inherit;
         left: 33% !important;
     }
-
+    
 }
 @media (min-width: 768px)
 {
@@ -166,6 +185,10 @@ html {
     }
     .bg-logo-col {
         background-color: transparent !important;
+    }
+    .parentbox {
+        float: left !important;
+        margin: 0 auto !important;
     }
 }
 @media (min-width: 922px)
@@ -303,6 +326,13 @@ background and color of text are very similar*/
     border-bottom-color: #1F2854;
     border-top-color: #1F2854;
 }
+
+/*Call to action box*/
+.call-to-action {
+    background: red !important;
+    
+}
+
 /*Search style adjustments*/
 .search-query {
     height: 30px;
@@ -358,6 +388,43 @@ background and color of text are very similar*/
 }
 .previous{
     left: 15px;
+}
+
+/*News Announcement style adjustments*/
+.news-announcement {
+    background: #EAEAEA;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+    margin-bottom: 5%;
+    height: 180px;
+}
+.news-announcement div {
+    width: 100% !important;
+    
+}
+.news-announcement-text #v_container {
+    height: 130px !important;
+}
+.news-announcement-text .vnewsticker {
+    font-size: 1em;
+}
+
+/*Info box style adjustments*/
+.infobox{
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 20px !important;
+    background-color: #EAEAEA;
+    
+    margin-bottom: 15%;
+    padding: 20%;
+    text-align: center;
+    height: 200px;
+    overflow: hidden;
+}
+.infobox .call-to-action {
+    background: red !important;
 }
 
 /*Footer style adjustments*/
