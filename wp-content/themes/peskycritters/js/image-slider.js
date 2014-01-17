@@ -1,20 +1,23 @@
 function slider() {
         
     function animate_slider(){
+        
         //Fade in and out the images
-        $('.slider #'+shown).animate({opacity:0},2000);
-        $('.slider #'+next_slide).animate({opacity:1.0},2000);
+        $('.slider #'+shown).animate({opacity:0},1500);
+        $('.slider #'+next_slide).animate({opacity:1.0},1500);
         
         //Fade in and out the image captions
         $('.slider .caption .content').html($('.slider .slider-img#'+shown).attr('alt')).animate({opacity: 0}, 0);
-        $('.slider .caption .content').html($('.slider .slider-img#'+next_slide).attr('alt')).animate({opacity: 0.7}, 2500);
+        $('.slider .caption .content').html($('.slider .slider-img#'+next_slide).attr('alt')).animate({opacity: 0.7}, 1000);
         
         shown = next_slide;
+        
     }
 
     function choose_next() {
         next_slide = (shown == sc)? 1:shown+1;
         animate_slider();
+        
     }
 
     $('.slider #1').css({opacity:1}); //show 1st image
@@ -38,11 +41,14 @@ function slider() {
         var n = e.target.getAttribute('name');
         if (n=='prev') {
             next_slide = (shown == 1)? sc:shown-1;
+            $('.slider .caption .content').html($('.slider .slider-img#'+next_slide).attr('alt')).animate({opacity: 0}, 0);
         } else if(n=='next') {
             next_slide = (shown == sc)? 1:shown+1;
+            $('.slider .caption .content').html($('.slider .slider-img#'+next_slide).attr('alt')).animate({opacity: 0}, 0);
         } else {
             return;
         }
+        
         animate_slider();
     });
 }

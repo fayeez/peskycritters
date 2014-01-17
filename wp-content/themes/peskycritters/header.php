@@ -24,7 +24,7 @@
 	<title>Pesky Critters</title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/bootstrap/css/peskystyle.css"  type="text/css"/>
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>style.css"  type="text/css"/>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -35,39 +35,43 @@
 </head>
 <body>
 	<div class="container">
-		<header class="row">
-			<div class="col-sm-3 bg-log-col">
-				<img class="logo-width logo-pos" src="<?php echo bloginfo('template_directory'); ?>/images/PeskyCrittersLogo.jpg" />
+		<header class="row no-margins header">
+			<div class="col-xs-4 col-sm-3 pull-left">
+				<a href="#"><img class="logo-width logo-left" src="<?php echo bloginfo('template_directory'); ?>/images/PeskyCrittersLogo.jpg" /></a>
 			</div>
-			<div class="col-xs-11 col-sm-9 pull-right" id="search">
+			<div class="col-xs-8 col-sm-9 pull-right" id="search">
 				<form method="get" class="search-bar pull-right" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<input type="text" class="search-query" name="s" placeholder="<?php esc_attr_e( 'Search', 'peskycritters' ); ?>">
 					<button type="submit" class="btn btn-primary"><i class="icon_search"></i>Go</button>
 				</form>
 			</div>
-			<div class="col-xs-10 col-md-12 strapline-margin col-centre">
-				<h2 class="site-description" id="strapline"><?php bloginfo( 'description' ); ?></h2>
+			<div class="col-xs-8 col-sm-9">
+				<h2 class="site-desription" id="strapline"><?php bloginfo( 'description' ); ?></h2>
 			</div>
-			<div class="col-xs-12 col-sm-12 contact">
-				<div class="col-xs-12 col-sm-2 text-left">
-					<div id="contact-phone"><img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> 01753 123456</div>
+			<div class="col-sm-9 contact-info">
+				<div class="col-xs-7 col-sm-3 col-md-3 no-margins">
+					<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> 01753 123456
 				</div>
-				<div class="col-xs-12 col-sm-3 heder-icon-margins text-left">
-					<div id="contact-mobile-number"><img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/phone-icon-col.png"; ?>" /> <strong>Rapid Response</strong> 07000000000</div>
+				<div class="col-xs-7 col-sm-5 col-md-4">
+					<div class="no-margins" id="contac-mobile-number">
+						<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/phone-icon-col.png"; ?>" /> <strong>Rapid Response</strong> 07000000000
+					</div>
 				</div>
-				<div class="col-xs-12 col-sm-2 col-md-3 text-left contact-pos">
-					<div id="contact-email"><img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> info@pesky-critters.co.uk</div>
+				<div class="col-xs-7 col-sm-4 col-md-3">
+					<div class="no-margins" id="contact-email">
+						<img class="header-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/email-icon-col.png"; ?>" /> info@pesky-critters.co.uk
+					</div>
 				</div>
-				<div class="col-sm-3 col-md-2 social-contact-pos pull-right">
-				<div class="pull-right">
-					<a href="#"><img class="header-social-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></a>
-					<a href="#"><img class="header-social-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></a>
-					<a href="#"><img class="header-social-icon-size" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></a>
+				<div class="col-sm-4 col-md-2 social-contact pull-right no-margins">
+					<div class="pull-right no-margins">
+						<a href="#"><img class="header-social-icon" src="<?php echo bloginfo('template_directory') ."/images/icons/facebook-icon-col.png"; ?>" /></a>
+						<a href="#"><img class="header-social-icon" src="<?php echo bloginfo('template_directory') ."/images/icons/twitter-icon-col.png"; ?>" /></a>
+						<a href="#"><img class="header-social-icon" src="<?php echo bloginfo('template_directory') ."/images/icons/youtube-icon-col.png"; ?>" /></a>
+					</div>
 				</div>
-			</div>
 			</div>
 		</header>
-		<div class="row">
+		<div class="row no-margins">
 			<nav class="navbar navbar-background">
 				<div class="navbar-inner">
 					<div class="container">

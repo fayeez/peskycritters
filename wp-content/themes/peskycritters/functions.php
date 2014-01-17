@@ -549,3 +549,37 @@ add_action( 'customize_preview_init', 'peskycritters_customize_preview_js' );
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
+
+
+// Filter to remove images from post content
+add_filter('the_content', 'img_content_filter');
+
+function img_content_filter($content)
+{
+    $content = preg_replace('#(<[/]?img.*>)#U', '', $content);
+    return $content;
+}
+
+function get_img_from_dir($dir){
+    // The directory that this function searches for images is in ...themes/peskycritters/images/
+    // Just specify the folder name within this directory
+					
+    $images = array();
+    $image_text = array();
+    $slider_img_dir = dirname(__FILE__) . '/images/'.$dir."/";
+    
+    if ($handle = opendir($slider_img_dir)){
+        while (false !== $entry = readdir($handle)){
+            if ($entry != "." && $entry != ".." && $entry != ".DS_Store") {
+                if (strpos($entry, 'jpg')){
+                    $images[] = $entry;
+                }
+                elseif (strpos($entry, 'txt')){
+                    $image_text[] = $entry;
+                }
+            }
+        }
+    }
+    $image_meta = array($images, $image_text);
+    return $image_meta;
+}
